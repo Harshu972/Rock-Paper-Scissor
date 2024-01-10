@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Asap, sans-serif;
+}
+header {
+  width: 100%;
+  text-align: center;
+  padding: 7px 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+header > h1 {
+  color: rgb(255, 247, 237);
+  font-family: Asap, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 5px;
+}
+header > h3 {
+  color: rgb(255, 247, 237);
+  font-family: Asap, sans-serif;
+  font-size: 12px;/* Add margin to separate h1 and h6 */
+}
+#one{
+  position: absolute;
+  top: 0em;
+  color: #f8f8f8;
+  font-size: 40px;
+  text-align: center;
+}
+body {
+  flex-direction: column;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.scoreboard{
+ border:3px solid white;
+ width: 200px;
+ margin: 150px 100px 80px 100px;
+ color: #f8f8f8;
+ font-size: 46px;
+ border-radius: 4px;
+ padding: 15px 20px;
+ font-family:Asap, sans-serif;
+ position: relative;
+ text-align: center;
+}
+#user-label{
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+#comp-label{
+  position: absolute;
+  top: 30px;
+  right: -25px;
+}
+.badge{
+  background: #e25043;
+  color: #f8f8f8;
+  font-size: 14px;
+  padding: 2px 10px;
+  font-family:sans-serif;
+}
+::selection {
+  color: #f8f8f8;
+  background-color: #7d2ae8;
+}
+.container {
+  padding-top: 10px;
+  border-radius: 25px;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);}
+.result_images {
+  display: flex;
+  column-gap: 7rem;
+}
+.container.start .user_result {
+  transform-origin: left;
+  animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+  50% {
+    transform: rotate(10deg);
+  }
+}
+.container.start .cpu_result {
+  transform-origin: right;
+  animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+.result_images img {
+  width: 120px;
+}
+.user_result img {
+  transform: rotate(90deg);
+}
+.cpu_result img {
+  transform: rotate(-90deg) rotateY(180deg);
+}
+.result {
+  text-align: center;
+  font-size: 2rem;
+  color:  #f8f8f8;
+  font-weight: 1000;
+  border: 3px solid rgb(255, 255, 255);
+  margin-top: 1.5rem;
+}
+.option_image img {
+  width: 75px;
+}
+.option_images {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  justify-content: space-between;
+  border: 3px solid rgb(255, 255, 255);
+}
+.container.start .option_images {
+  pointer-events: none;
+}
+.option_image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.option_image:hover {
+  opacity: 1;
+}
+.option_image.active {
+  opacity: 1;
+}
+.option_image img {
+  pointer-events: none;
+}
+.option_image p {
+  color: #f8f8f8;
+  font-size: 1.235rem;
+  margin-top: 1rem;
+  pointer-events: none;
+}
+.backvid{
+  background-size: cover;
+  position:fixed;
+  right: 0;
+  left: 0;
+  z-index: -17;
+}
+@media(min-aspect-ratio: 16/9){
+  .backvid{
+    width: 100%;
+    height:auto;
+  }
+}
+@media(max-aspect-ratio: 16/9){
+  .backvid{
+    width:auto;
+    height:100%;
+  }
+}
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 10px 10px 10px;
+  z-index: 1001;
+}
+.logo a {
+  text-decoration: none;
+}
+.logo img {
+  width: 88px;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+.Social {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0px 10px 0px 0%;
+  z-index: 1001;
+}
+.Social a {
+  text-decoration: none;
+}
+.Social img {
+  width: 40px;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.rules {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.rules h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.rules ul {
+  list-style: none;
+  padding: 0;
+}
+.rules li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.draw-counter {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  border: 2px dotted #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+#draw-count {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+   <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="rules">
+      <h2>Game Rules:</h2>
+      <ul>
+        <li>>Rock beats Scissors</li>
+        <li>>Scissors beats Paper</li>
+        <li>>Paper beats Rock</li>
+      </ul>
+    </div>
+    <div class="draw-counter">
+      <span id="draw-count">Draws: 0</span>
+    </div>
+    <div class="logo">
+      <a href="frontindex.html">
+      <img src="images/logo.png" alt="Logo">
+    </a>
+    </div>
+    <div class="Social">
+      <a href="https://www.instagram.com/har_shit_2/">
+      <img src="images/insta.jpg" alt="Logo">
+    </a>
+    </div>
+    <header>
+      <h1><u>Rock Paper Scissors</u> </h1>
+      <h3>Developed By- Harshit Joshi</h3>
+    </header>
+    <video autoplay loop muted plays-inline class="backvid">
+      <source src="images/background clip.mp4" type="video/mp4">
+    </video>
+    <div class="scoreboard">
+      <div id="comp-label" class="badge">comp</div>
+      <div id="user-label" class="badge">user</div>
+      <span id="user-score">0</span>:<span id="comp-score">0</span>
+    </div>
+      <div class="container">
+        <div class="result_field">
+          <div class="result_images"> 
+            <span class="user_result">
+              <img src="images/rock.png" alt="Try reload" />
+            </span>
+            <span class="cpu_result">
+              <img src="images/rock.png" alt="Try reload" />
+            </span>
+          </div>
+          <div class="result">Make your move!
+          </div>
+        </div>
+      <div class="option_images">
+        <span class="option_image">
+          <img src="images/rock.png" alt="" />
+          <p><b>Rock</b></p>
+        </span>
+        <span class="option_image">
+          <img src="images/paper.png" alt="" />
+          <p><b>Paper</b></p>
+        </span>
+        <span class="option_image">
+          <img src="images/scissors.png" alt="" />
+          <p><b>Scissors</b></p>
+        </span>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
